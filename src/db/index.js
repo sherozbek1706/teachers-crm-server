@@ -7,6 +7,9 @@ const db = () => {
     .then(() => {
       console.log("SERVER HAS BEEN CONNECTED TO DATABASE SUCCESSFULL");
     })
+    .catch(() => {
+      console.log("SERVER CAN NOT CONNECT TO DATABASE");
+    });
 };
 
 module.exports = db;
