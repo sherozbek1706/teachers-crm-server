@@ -14,6 +14,12 @@ const handleError = require("./shared/errors/handle");
 app.use(cors());
 app.use(express.json());
 
+// import router
+const userRoute = require("./modules/user/_api");
+
+// middleware router
+app.use(userRoute);
+
 // DATABAZAGA ULANISH
 db();
 
