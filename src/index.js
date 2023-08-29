@@ -7,6 +7,9 @@ const app = express();
 // PORT aniqlab olish
 const PORT = config.port || 8080;
 
+// import handleError
+const handleError = require("./shared/errors/handle");
+
 // middleware
 app.use(cors());
 app.use(express.json());
