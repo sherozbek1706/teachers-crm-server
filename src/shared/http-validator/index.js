@@ -20,4 +20,11 @@ const httpValidator = ({ body, params, query }, schema) => {
     if (error) throw new BadRequestError(error.message);
   }
 
+  if (query) {
+    const { error } = schema.query.validate(query);
+
+    if (error) throw new BadRequestError(error.message);
+  }
+};
+
 module.exports = httpValidator;
