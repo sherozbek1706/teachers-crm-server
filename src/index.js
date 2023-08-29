@@ -17,6 +17,9 @@ app.use(express.json());
 // DATABAZAGA ULANISH
 db();
 
+// Middleware Error
+app.use(handleError);
+
 app.listen(PORT, () => {
   console.log(`SERVER HAS BEEN STARTED ON PORT:${PORT}`);
 });
