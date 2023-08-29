@@ -9,6 +9,7 @@ const PORT = config.port || 8080;
 
 // middleware
 app.use(cors());
+app.use(express.json());
 
 // DATABAZAGA ULANISH
 db();
