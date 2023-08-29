@@ -38,3 +38,9 @@ class ForbiddenError extends Error {
   }
 }
 
+module.exports = {
+  BadRequestError,
+  NotFoundError,
+  UnauthorizedError,
+  ForbiddenError,
+};
