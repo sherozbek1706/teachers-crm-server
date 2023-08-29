@@ -8,4 +8,10 @@ const { BadRequestError } = require("../errors");
  */
 
 const httpValidator = ({ body, params, query }, schema) => {
+  if (body) {
+    const { error } = schema.body.validate(body);
+
+    if (error) throw new BadRequestError(error.message);
+  }
+
 module.exports = httpValidator;
