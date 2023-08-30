@@ -52,6 +52,12 @@ const listUserServices = async ({ query }) => {
     offset: page.offset,
     limit: page.limit,
   };
+
+  const response = {
+    data: list_users,
+    pageInfo,
+  };
+
 };
 
 module.exports = listUserServices;
