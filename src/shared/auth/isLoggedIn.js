@@ -22,6 +22,9 @@ const isLoggedIn = async (req, res, next) => {
       ignoreExpiration: false,
     });
 
+    req.user = decoded.user;
+
+    next();
   } catch (error) {
     next(new UnauthorizedError(error.message));
   }
