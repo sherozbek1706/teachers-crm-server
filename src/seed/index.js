@@ -11,6 +11,7 @@ const User = require("../modules/user/User");
 const UsersSeed = require("./users-seed.js");
 
 const seedData = async () => {
+  const uri = `mongodb://${config.db.host}:${config.db.port}/${config.db.name}`;
 };
 
 seedData();
