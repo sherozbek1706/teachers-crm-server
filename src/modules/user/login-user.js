@@ -1,4 +1,6 @@
 const User = require("./User");
+const jwt = require("jsonwebtoken");
+const config = require("../../shared/config");
 const { NotFoundError, ForbiddenError } = require("../../shared/errors");
 const { compareSync } = require("bcryptjs");
 const loginUserServices = async ({ body }) => {
@@ -20,6 +22,10 @@ const loginUserServices = async ({ body }) => {
     id: existing.id,
     role: existing.role,
   };
+
+  const token = jwt.sign({ user: decode }, config.jwt.secret, {
+    expiresIn: config.jwt.expirec_in,
+  });
 
 };
 
