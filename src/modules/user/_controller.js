@@ -2,6 +2,7 @@ const express = require("express");
 const loginUserServices = require("./login-user");
 const addUserServices = require("./add-user");
 const listUserServices = require("./list-users");
+const showUserServices = require("./show-user");
 
 /**
  *
@@ -76,8 +77,10 @@ const showUser = async (req, res, next) => {
     next(error);
   }
 };
+
 module.exports = {
   loginUser,
   addUser,
   listUser,
+  showUser,
 };
