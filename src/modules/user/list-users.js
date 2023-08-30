@@ -38,7 +38,11 @@ const listUserServices = async ({ query }) => {
       filters.role = filters.role == "employee" ? "employee" : "admin";
     }
   }
+
+  // pagination ---------------------------------
+
   const users = await User.find({ ...filter, ...filters }).sort(sorted);
+  const list_users = await User.find({ ...filter, ...filters })
 };
 
 module.exports = listUserServices;
