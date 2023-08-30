@@ -1,0 +1,99 @@
+### login user
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+  "username": "rstegers0",
+  "password": "1234"
+}
+
+### add user
+POST http://localhost:5000/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzMyNTA4NiwiZXhwIjoxNjkzNDExNDg2fQ.BGTSMNwhoD0yfcVnYpfKbPO0KQKrGM1oz-edfCKJHYk
+Content-Type: application/json
+
+{
+  "first_name": "Nasiba",
+  "last_name": "Azimov",
+  "role": "employee",
+  "age":17,
+  "username":"nasiba",
+  "password": "1234"
+}
+
+
+
+
+
+
+
+### get users without some query
+GET http://localhost:5000/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzMyNTA4NiwiZXhwIjoxNjkzNDExNDg2fQ.BGTSMNwhoD0yfcVnYpfKbPO0KQKrGM1oz-edfCKJHYk
+Content-Type: application/json
+
+
+
+
+
+
+
+
+
+### get users with GET /users?q=sheroz
+GET http://localhost:5000/users?q=sheroz
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzMyNTA4NiwiZXhwIjoxNjkzNDExNDg2fQ.BGTSMNwhoD0yfcVnYpfKbPO0KQKrGM1oz-edfCKJHYk
+Content-Type: application/json
+
+
+
+
+
+
+
+### get users with GET /users?sort[by]=age&sort[order]=desc
+GET http://localhost:5000/users?sort[by]=age&sort[order]=desc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzMyNTA4NiwiZXhwIjoxNjkzNDExNDg2fQ.BGTSMNwhoD0yfcVnYpfKbPO0KQKrGM1oz-edfCKJHYk
+Content-Type: application/json
+
+
+
+
+
+
+
+### get users with GET /users?sort[by]=age&sort[order]=desc
+GET http://localhost:5000/users?sort[by]=age&sort[order]=asc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzMyNTA4NiwiZXhwIjoxNjkzNDExNDg2fQ.BGTSMNwhoD0yfcVnYpfKbPO0KQKrGM1oz-edfCKJHYk
+Content-Type: application/json
+
+
+
+
+
+
+### get users with GET /users?filters[role]=employee
+GET http://localhost:5000/users?filters[role]=admin
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzMyNTA4NiwiZXhwIjoxNjkzNDExNDg2fQ.BGTSMNwhoD0yfcVnYpfKbPO0KQKrGM1oz-edfCKJHYk
+Content-Type: application/json
+
+
+
+
+
+
+
+
+
+### get users with GET /users?page[offset]=0&page[limit]=10
+GET http://localhost:5000/users?page[offset]=0&page[limit]=10
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzMyNTA4NiwiZXhwIjoxNjkzNDExNDg2fQ.BGTSMNwhoD0yfcVnYpfKbPO0KQKrGM1oz-edfCKJHYk
+Content-Type: application/json
+
+
+
+### show users with (id)
+GET http://localhost:5000/users/64ee0dde481fa99395111f95
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzMyNTA4NiwiZXhwIjoxNjkzNDExNDg2fQ.BGTSMNwhoD0yfcVnYpfKbPO0KQKrGM1oz-edfCKJHYk
+# Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk1Iiwicm9sZSI6ImVtcGxveWVlIn0sImlhdCI6MTY5MzMyNjA4OCwiZXhwIjoxNjkzNDEyNDg4fQ.dZ_cYSmVsdPs8t-fwidH4_0SkVK7_9FFjF_rLcVtHo4
+Content-Type: application/json
