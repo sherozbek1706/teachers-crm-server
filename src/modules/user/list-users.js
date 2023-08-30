@@ -58,6 +58,7 @@ const listUserServices = async ({ query }) => {
     pageInfo,
   };
 
+  return response;
 };
 
 module.exports = listUserServices;
