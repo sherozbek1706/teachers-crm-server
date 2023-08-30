@@ -45,6 +45,7 @@ const listUserServices = async ({ query }) => {
   const list_users = await User.find({ ...filter, ...filters })
     .sort(sorted)
     .limit(page.limit)
+    .skip(page.offset);
 };
 
 module.exports = listUserServices;
