@@ -1,6 +1,7 @@
 const express = require("express");
 const loginUserServices = require("./login-user");
 const addUserServices = require("./add-user");
+const listUserServices = require("./list-users");
 
 /**
  *
@@ -35,6 +36,19 @@ const addUser = async (req, res, next) => {
     next(error);
   }
 };
+
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const listUser = async (req, res, next) => {
+  try {
+    const result = await listUserServices({ query: req.query });
+
+    res.status(200).json(result);
   } catch (error) {
     next(error);
   }
@@ -46,4 +60,5 @@ const addUser = async (req, res, next) => {
 module.exports = {
   loginUser,
   addUser,
+  listUser,
 };
