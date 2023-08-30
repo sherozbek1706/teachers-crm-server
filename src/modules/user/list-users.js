@@ -33,6 +33,8 @@ const listUserServices = async ({ query }) => {
   // filter ---------------------------------
 
   if (filters) {
+    if (filters.role) {
+    }
   }
 };
 
