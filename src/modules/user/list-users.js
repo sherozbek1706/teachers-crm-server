@@ -46,6 +46,9 @@ const listUserServices = async ({ query }) => {
     .sort(sorted)
     .limit(page.limit)
     .skip(page.offset);
+
+  const pageInfo = {
+  };
 };
 
 module.exports = listUserServices;
