@@ -12,7 +12,6 @@ const UserSchema = new mongoose.Schema(
     role: {
       type: mongoose.SchemaTypes.String,
       enum: ["employee", "admin"],
-      default: "employee",
     },
     age: {
       type: mongoose.SchemaTypes.Number,
@@ -23,6 +22,16 @@ const UserSchema = new mongoose.Schema(
       unique: true,
     },
     password: reqType,
+  },
+  {
+    versionKey: false,
+    id: true,
+    toJSON: {
+      transform(doc, ret) {
+        ret.id = ret._id;
+        delete ret._id;
+      },
+    },
   }
 );
 const User = mongoose.model("user", UserSchema);
