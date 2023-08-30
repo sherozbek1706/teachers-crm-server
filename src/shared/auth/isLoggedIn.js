@@ -1,5 +1,6 @@
 const express = require("express");
 const { UnauthorizedError } = require("../errors");
+const config = require("../config");
 const jwt = require("jsonwebtoken");
 
 /**
