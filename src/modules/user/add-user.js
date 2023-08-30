@@ -17,6 +17,12 @@ const addUserServices = async ({ body }) => {
 
   const hashedPassword = hashSync(password, 10);
 
+  const createdUser = await User.create({
+    ...data,
+    username,
+    password: hashedPassword,
+  });
+  return createdUser;
 };
 
 module.exports = addUserServices;
