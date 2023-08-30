@@ -9,6 +9,13 @@ const express = require("express");
 
 const addUser = async (req, res, next) => {
   try {
+    const result = await addUserServices({ body: req.body });
+
+    res.status(201).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
   } catch (error) {
     next(error);
   }
