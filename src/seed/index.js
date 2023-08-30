@@ -25,6 +25,13 @@ const seedData = async () => {
       console.log("error", err);
     });
 
+  const seedDB = async () => {
+    // Har bitta collectionsga malumot qo'shishdan oldin
+    // o'sha collecttionni o'chirish kerek
+    await User.deleteMany({});
+    await User.insertMany(UsersSeed);
+  };
+
 };
 
 seedData();
