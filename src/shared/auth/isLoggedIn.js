@@ -11,6 +11,12 @@ const jwt = require("jsonwebtoken");
 
 const isLoggedIn = async (req, res, next) => {
   try {
+    const token = req.headers.authorization;
+
+    if (!token) {
+      throw new UnauthorizedError("Unauthorized");
+    }
+
   } catch (error) {
     next(new UnauthorizedError(error.message));
   }
