@@ -8,6 +8,19 @@ const addUserServices = require("./add-user");
  * @param {express.NextFunction} next
  */
 
+const loginUser = async (req, res, next) => {
+  } catch (error) {
+    next(error);
+  }
+};
+
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
 const addUser = async (req, res, next) => {
   try {
     const result = await addUserServices({ body: req.body });
