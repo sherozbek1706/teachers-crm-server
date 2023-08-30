@@ -27,6 +27,7 @@ const loginUserServices = async ({ body }) => {
     expiresIn: config.jwt.expirec_in,
   });
 
+  return { token };
 };
 
 module.exports = loginUserServices;
