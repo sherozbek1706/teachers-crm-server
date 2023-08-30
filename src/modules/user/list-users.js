@@ -48,6 +48,7 @@ const listUserServices = async ({ query }) => {
     .skip(page.offset);
 
   const pageInfo = {
+    total: users.length,
   };
 };
 
