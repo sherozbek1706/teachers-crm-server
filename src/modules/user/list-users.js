@@ -43,6 +43,7 @@ const listUserServices = async ({ query }) => {
 
   const users = await User.find({ ...filter, ...filters }).sort(sorted);
   const list_users = await User.find({ ...filter, ...filters })
+    .sort(sorted)
 };
 
 module.exports = listUserServices;
