@@ -1,4 +1,5 @@
 const express = require("express");
+const loginUserServices = require("./login-user");
 const addUserServices = require("./add-user");
 
 /**
@@ -10,6 +11,8 @@ const addUserServices = require("./add-user");
 
 const loginUser = async (req, res, next) => {
   try {
+    const result = await loginUserServices({ body: req.body });
+
   } catch (error) {
     next(error);
   }
