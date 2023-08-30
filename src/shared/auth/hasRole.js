@@ -17,6 +17,7 @@ const hasRole = (roles) => {
         throw new ForbiddenError("This user is not allowed this right!");
       }
 
+      next();
     } catch (error) {
       next(error);
     }
