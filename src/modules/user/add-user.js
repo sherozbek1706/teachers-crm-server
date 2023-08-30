@@ -1,3 +1,4 @@
+const { hashSync } = require("bcryptjs");
 const User = require("./User");
 const { BadRequestError } = require("../../shared/errors");
 const { user_roles } = require("../../shared/const");
@@ -13,6 +14,8 @@ const addUserServices = async ({ body }) => {
   if (!user_roles.includes(body.role)) {
     throw new BadRequestError("This role invalid!");
   }
+
+  const hashedPassword = hashSync(password, 10);
 
 };
 
