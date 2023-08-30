@@ -1,3 +1,7 @@
+const User = require("./User");
+
+const { NotFoundError, ForbiddenError } = require("../../shared/errors");
+
 const showUserServices = async ({ params, user }) => {
   console.log(user);
   if (user) {
@@ -16,6 +20,7 @@ const showUserServices = async ({ params, user }) => {
     todo_guides: 2,
     read_guides: 1,
   };
+  return { ...existing._doc, ...infoGuide };
 };
 
 module.exports = showUserServices;
