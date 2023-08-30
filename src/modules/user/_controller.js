@@ -63,6 +63,8 @@ const listUser = async (req, res, next) => {
 
 const showUser = async (req, res, next) => {
   try {
+    let result;
+
   } catch (error) {
     next(error);
   }
