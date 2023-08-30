@@ -5,6 +5,12 @@ const showUserServices = async ({ params, user }) => {
       throw new ForbiddenError("This user is not allowed this right!");
     }
   }
+
+  const existing = await User.findOne({ _id: params.id });
+
+  if (!existing) {
+    throw new NotFoundError("User Not Found!");
+  }
 };
 
 module.exports = showUserServices;
