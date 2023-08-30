@@ -70,6 +70,8 @@ const showUser = async (req, res, next) => {
     } else {
       result = await showUserServices({ params: req.params, user: req.user });
     }
+
+    res.status(200).json({ data: result });
   } catch (error) {
     next(error);
   }
