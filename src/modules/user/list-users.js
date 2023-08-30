@@ -7,6 +7,7 @@ const listUserServices = async ({ query }) => {
   const {
     q,
     sort = { by: "", order: "asc" },
+    filters,
   } = query;
   const { by, order } = sort;
 
