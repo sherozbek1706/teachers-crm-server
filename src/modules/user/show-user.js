@@ -11,6 +11,11 @@ const showUserServices = async ({ params, user }) => {
   if (!existing) {
     throw new NotFoundError("User Not Found!");
   }
+  const infoGuide = {
+    total_guides: 3,
+    todo_guides: 2,
+    read_guides: 1,
+  };
 };
 
 module.exports = showUserServices;
