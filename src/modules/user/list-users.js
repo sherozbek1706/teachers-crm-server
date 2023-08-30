@@ -7,6 +7,14 @@ const listUserServices = async ({ query }) => {
   const {
     q,
   } = query;
+  // search ---------------------------------
+
+  if (q) {
+    filter[`$or`] = [
+      { first_name: { $regex: new RegExp(q, "i") } },
+    ];
+  }
+
 };
 
 module.exports = listUserServices;
