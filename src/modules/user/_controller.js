@@ -13,3 +13,7 @@ const addUser = async (req, res, next) => {
     next(error);
   }
 };
+  } catch (error) {
+    next(error);
+  }
+};
