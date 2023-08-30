@@ -50,6 +50,7 @@ const listUserServices = async ({ query }) => {
   const pageInfo = {
     total: users.length,
     offset: page.offset,
+    limit: page.limit,
   };
 };
 
