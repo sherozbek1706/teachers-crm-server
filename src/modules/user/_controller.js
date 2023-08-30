@@ -13,6 +13,7 @@ const loginUser = async (req, res, next) => {
   try {
     const result = await loginUserServices({ body: req.body });
 
+    res.status(200).json({ data: result });
   } catch (error) {
     next(error);
   }
