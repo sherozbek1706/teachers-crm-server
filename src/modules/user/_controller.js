@@ -25,3 +25,6 @@ const addUser = async (req, res, next) => {
     next(error);
   }
 };
+module.exports = {
+  addUser,
+};
