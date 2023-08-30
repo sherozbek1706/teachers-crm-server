@@ -11,6 +11,7 @@ const { ForbiddenError } = require("../errors");
 const hasRole = (roles) => {
   return async (req, res, next) => {
     try {
+      const { role } = req.user;
     } catch (error) {
       next(error);
     }
