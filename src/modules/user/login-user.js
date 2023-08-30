@@ -16,6 +16,11 @@ const loginUserServices = async ({ body }) => {
     throw new ForbiddenError("Password incorrect!");
   }
 
+  let decode = {
+    id: existing.id,
+    role: existing.role,
+  };
+
 };
 
 module.exports = loginUserServices;
