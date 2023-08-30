@@ -34,6 +34,7 @@ const listUserServices = async ({ query }) => {
 
   if (filters) {
     if (filters.role) {
+      filters.role = filters.role == "employee" ? "employee" : "admin";
     }
   }
 };
