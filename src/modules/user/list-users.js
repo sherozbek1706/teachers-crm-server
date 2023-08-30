@@ -12,6 +12,7 @@ const listUserServices = async ({ query }) => {
   if (q) {
     filter[`$or`] = [
       { first_name: { $regex: new RegExp(q, "i") } },
+      { last_name: { $regex: new RegExp(q, "i") } },
     ];
   }
 
