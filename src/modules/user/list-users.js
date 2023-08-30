@@ -25,6 +25,10 @@ const listUserServices = async ({ query }) => {
     sorted = order == "asc" ? { _id: 1 } : { _id: -1 };
   }
 
+  if (by == "age") {
+    sorted = order == "asc" ? { age: 1 } : { age: -1 };
+  }
+
 };
 
 module.exports = listUserServices;
