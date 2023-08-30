@@ -35,6 +35,16 @@ const addUser = async (req, res, next) => {
     next(error);
   }
 };
+
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const listUser = async (req, res, next) => {
+  try {
   } catch (error) {
     next(error);
   }
