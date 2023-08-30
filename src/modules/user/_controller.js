@@ -65,6 +65,8 @@ const showUser = async (req, res, next) => {
   try {
     let result;
 
+    if (req.params.id == "me") {
+      result = await showUserServices({ params: req.user });
   } catch (error) {
     next(error);
   }
