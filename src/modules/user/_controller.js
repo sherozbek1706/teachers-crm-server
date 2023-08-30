@@ -44,5 +44,6 @@ const addUser = async (req, res, next) => {
   }
 };
 module.exports = {
+  loginUser,
   addUser,
 };
