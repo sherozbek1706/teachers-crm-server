@@ -3,6 +3,7 @@ const loginUserServices = require("./login-user");
 const addUserServices = require("./add-user");
 const listUserServices = require("./list-users");
 const showUserServices = require("./show-user");
+const editUserServices = require("./edit-user");
 
 /**
  *
