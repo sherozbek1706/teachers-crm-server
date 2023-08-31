@@ -79,6 +79,13 @@ const showUser = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
 module.exports = {
   loginUser,
   addUser,
