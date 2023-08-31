@@ -17,5 +17,6 @@ router.post("/users/login", loginUser);
 router.post("/users", mAddUser, addUser);
 router.get("/users", mListUser, listUser);
 router.get("/users/:id", mShowUser, showUser);
+router.patch("/users/:id", mEditUser, editUser);
 
 module.exports = router;
