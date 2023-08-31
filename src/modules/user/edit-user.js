@@ -1,3 +1,4 @@
+const { NotFoundError } = require("../../shared/errors");
 const User = require("./User");
 
 const editUserServices = async ({ body, params }) => {
