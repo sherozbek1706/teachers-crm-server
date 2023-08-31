@@ -3,6 +3,7 @@ const loginUserServices = require("./login-user");
 const addUserServices = require("./add-user");
 const listUserServices = require("./list-users");
 const showUserServices = require("./show-user");
+const editUserServices = require("./edit-user");
 
 /**
  *
@@ -78,9 +79,29 @@ const showUser = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const editUser = async (req, res, next) => {
+  try {
+    const result = await editUserServices({
+      body: req.body,
+      params: req.params,
+    });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   loginUser,
   addUser,
   listUser,
   showUser,
+  editUser,
 };
