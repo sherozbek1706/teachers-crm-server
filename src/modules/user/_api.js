@@ -1,6 +1,12 @@
 const router = require("express").Router();
 const { isloggedIn, hasRole } = require("../../shared/auth");
-const { loginUser, addUser, listUser, showUser } = require("./_controller");
+const {
+  loginUser,
+  addUser,
+  listUser,
+  showUser,
+  editUser,
+} = require("./_controller");
 
 const mAddUser = [isloggedIn, hasRole(["admin"])];
 const mListUser = [isloggedIn, hasRole(["admin"])];
