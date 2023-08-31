@@ -86,9 +86,12 @@ const showUser = async (req, res, next) => {
  * @param {express.NextFunction} next
  */
 
+const editUser = async (req, res, next) => {
+
 module.exports = {
   loginUser,
   addUser,
   listUser,
   showUser,
+  editUser,
 };
