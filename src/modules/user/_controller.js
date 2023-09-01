@@ -107,6 +107,16 @@ const editUser = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const removeUser = async (req, res, next) => {
+};
+
 module.exports = {
   loginUser,
   addUser,
