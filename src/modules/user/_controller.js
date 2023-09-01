@@ -88,10 +88,18 @@ const showUser = async (req, res, next) => {
 
 const editUser = async (req, res, next) => {
   try {
-    const result = await editUserServices({
-      body: req.body,
-      params: req.params,
-    });
+    let result;
+
+    if (req.params.id == "me") {
+      result = await editUserServices({ body: req.body, params: req.user });
+    } else {
+      result = await editUserServices({
+        body: req.body,
+        params: req.params,
+        user: req.user,
+      });
+    }
+
     res.status(200).json({ data: result });
   } catch (error) {
     next(error);
