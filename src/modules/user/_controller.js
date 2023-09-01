@@ -88,6 +88,8 @@ const showUser = async (req, res, next) => {
 
 const editUser = async (req, res, next) => {
   try {
+    let result;
+
     res.status(200).json({ data: result });
   } catch (error) {
     next(error);
