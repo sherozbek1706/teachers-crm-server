@@ -25,6 +25,12 @@ const editUserServices = async ({ body, params, user }) => {
     throw new BadRequestError("This username already existed!");
   }
 
+  const editedUserObj = {
+    first_name: body.first_name ? body.first_name : existing.first_name,
+    last_name: body.last_name ? body.last_name : existing.last_name,
+    username: body.username ? body.username : existing.username,
+  };
+
   const editedUser = await User.findByIdAndUpdate(
     { _id: params.id },
     { ...existing._doc, ...body },
