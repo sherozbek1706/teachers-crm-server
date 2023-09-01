@@ -6,7 +6,7 @@ const {
 } = require("../../shared/errors");
 const User = require("./User");
 
-const editUserServices = async ({ body, params }) => {
+const editUserServices = async ({ body, params, user }) => {
   const existing = await User.findOne({ _id: params.id });
 
   if (!existing) {
