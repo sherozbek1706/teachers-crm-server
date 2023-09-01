@@ -40,7 +40,7 @@ const editUserServices = async ({ body, params, user }) => {
 
   const editedUser = await User.findByIdAndUpdate(
     { _id: params.id },
-    { ...existing._doc, ...body },
+    { ...existing._doc, ...editedUserObj },
     { new: true }
   );
 
