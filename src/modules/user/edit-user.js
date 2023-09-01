@@ -31,6 +31,13 @@ const editUserServices = async ({ body, params, user }) => {
     username: body.username ? body.username : existing.username,
   };
 
+  if (existing.role == "admin" || user) {
+    editedUserObj.password = body.password
+      ? hashSync(body.password, 10)
+      : existing.password;
+    editedUserObj.role = body.role ? body.role : existing.role;
+  }
+
   const editedUser = await User.findByIdAndUpdate(
     { _id: params.id },
     { ...existing._doc, ...body },
