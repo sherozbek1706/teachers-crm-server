@@ -1,3 +1,4 @@
+const { hashSync } = require("bcryptjs");
 const {
   NotFoundError,
   BadRequestError,
