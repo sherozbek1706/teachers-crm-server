@@ -12,5 +12,9 @@ const removeUserServices = async ({ params, user }) => {
   if(user.id == existing.id){
     throw new BadRequestError("Mumkin emas! Admin o'zini o'chirish!")
   }
+
+  const removedUser = await User.findByIdAndDelete({ _id: params.id });
+
+  return removedUser;
 };
 module.exports = removeUserServices;
