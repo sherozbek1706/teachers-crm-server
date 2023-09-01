@@ -57,7 +57,7 @@ Content-Type: application/json
 
 ### get users with GET /users?sort[by]=age&sort[order]=desc
 GET http://localhost:5000/users?sort[by]=age&sort[order]=desc
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzUwNDkzNCwiZXhwIjoxNjkzNTkxMzM0fQ.OviBRlrvZ6r_hSaobVMai5OLhFz651FNhiJQN3vZqKo
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
 Content-Type: application/json
 
 
@@ -68,7 +68,7 @@ Content-Type: application/json
 
 ### get users with GET /users?sort[by]=age&sort[order]=desc
 GET http://localhost:5000/users?sort[by]=age&sort[order]=asc
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzUwNDkzNCwiZXhwIjoxNjkzNTkxMzM0fQ.OviBRlrvZ6r_hSaobVMai5OLhFz651FNhiJQN3vZqKo
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
 Content-Type: application/json
 
 
@@ -78,7 +78,7 @@ Content-Type: application/json
 
 ### get users with GET /users?filters[role]=employee
 GET http://localhost:5000/users?filters[role]=admin
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzUwNDkzNCwiZXhwIjoxNjkzNTkxMzM0fQ.OviBRlrvZ6r_hSaobVMai5OLhFz651FNhiJQN3vZqKo
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
 Content-Type: application/json
 
 
@@ -91,24 +91,24 @@ Content-Type: application/json
 
 ### get users with GET /users?page[offset]=0&page[limit]=10
 GET http://localhost:5000/users?page[offset]=0&page[limit]=10
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzUwNDkzNCwiZXhwIjoxNjkzNTkxMzM0fQ.OviBRlrvZ6r_hSaobVMai5OLhFz651FNhiJQN3vZqKo
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
 Content-Type: application/json
 
 
 
 ### show users
-GET http://localhost:5000/users/64ee0dde481fa99395111f95
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzUwNDkzNCwiZXhwIjoxNjkzNTkxMzM0fQ.OviBRlrvZ6r_hSaobVMai5OLhFz651FNhiJQN3vZqKo
-# Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk1Iiwicm9sZSI6ImVtcGxveWVlIn0sImlhdCI6MTY5MzMyNjA4OCwiZXhwIjoxNjkzNDEyNDg4fQ.dZ_cYSmVsdPs8t-fwidH4_0SkVK7_9FFjF_rLcVtHo4
+GET http://localhost:5000/users/me
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
 Content-Type: application/json
 
 
 ### edit users with ( id )
-PATCH http://localhost:5000/users/64ee0dde481fa99395111f95
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzUwNDkzNCwiZXhwIjoxNjkzNTkxMzM0fQ.OviBRlrvZ6r_hSaobVMai5OLhFz651FNhiJQN3vZqKo
+PATCH http://localhost:5000/users/me
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
+# Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjlkIiwicm9sZSI6ImVtcGxveWVlIn0sImlhdCI6MTY5MzU0ODAzNywiZXhwIjoxNjkzNjM0NDM3fQ.ErHEdpnGMKBzHQrCVtMUwM17AeSIJPHUtmTXhPO3O8M
 Content-Type: application/json
 
 {
-  "first_name": "Malika",
-  "last_name": "Karimova"
+  "first_name": "Sherozbek",
+  "last_name": "nima gap",
 }
