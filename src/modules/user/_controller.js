@@ -90,6 +90,9 @@ const editUser = async (req, res, next) => {
   try {
     let result;
 
+    if (req.params.id == "me") {
+      result = await editUserServices({ body: req.body, params: req.user });
+    } else {
     res.status(200).json({ data: result });
   } catch (error) {
     next(error);
