@@ -4,6 +4,7 @@ const addUserServices = require("./add-user");
 const listUserServices = require("./list-users");
 const showUserServices = require("./show-user");
 const editUserServices = require("./edit-user");
+const removeUserServices = require("./remove-user");
 
 /**
  *
