@@ -9,5 +9,8 @@ const removeUserServices = async ({ params, user }) => {
     throw new NotFoundError("User Not Found!");
   }
 
+  if(user.id == existing.id){
+    throw new BadRequestError("Mumkin emas! Admin o'zini o'chirish!")
+  }
 };
 module.exports = removeUserServices;
