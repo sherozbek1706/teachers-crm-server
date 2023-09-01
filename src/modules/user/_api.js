@@ -11,7 +11,7 @@ const {
 const mAddUser = [isloggedIn, hasRole(["admin"])];
 const mListUser = [isloggedIn, hasRole(["admin"])];
 const mShowUser = [isloggedIn];
-const mEditUser = [isloggedIn, hasRole(["admin"])];
+const mEditUser = [isloggedIn];
 
 router.post("/users/login", loginUser);
 router.post("/users", mAddUser, addUser);
