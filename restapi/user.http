@@ -77,7 +77,7 @@ Content-Type: application/json
 
 
 ### get users with GET /users?filters[role]=employee
-GET http://localhost:5000/users?filters[role]=admin
+GET http://localhost:5000/users?filters[role]=employee
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
 Content-Type: application/json
 
@@ -110,5 +110,10 @@ Content-Type: application/json
 
 {
   "first_name": "Sherozbek",
-  "last_name": "nima gap",
+  "last_name": "nima gap"
 }
+
+
+### remove user with { id }
+DELETE http://localhost:5000/users/64ee0dde481fa99395111f94
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
