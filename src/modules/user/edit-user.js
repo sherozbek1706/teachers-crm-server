@@ -18,6 +18,13 @@ const editUserServices = async ({ body, params, user }) => {
   if (!existing) {
     throw new NotFoundError("User Not Found!");
   }
+
+  const existedUsername = await User.findOne({ username: body.username });
+
+  if (existedUsername) {
+    throw new BadRequestError("This username already existed!");
+  }
+
   const editedUser = await User.findByIdAndUpdate(
     { _id: params.id },
     { ...existing._doc, ...body },
