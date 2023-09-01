@@ -133,4 +133,5 @@ module.exports = {
   listUser,
   showUser,
   editUser,
+  removeUser,
 };
