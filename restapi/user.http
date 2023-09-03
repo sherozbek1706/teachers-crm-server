@@ -98,19 +98,20 @@ Content-Type: application/json
 
 ### show users
 GET http://localhost:5000/users/me
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjlkIiwicm9sZSI6ImVtcGxveWVlIn0sImlhdCI6MTY5MzY3OTgzNSwiZXhwIjoxNjkzNzY2MjM1fQ.-LpFOMQ7-vDA72Z-CScZ7OxRuqGB6un6pa_yaCNWu9U
 Content-Type: application/json
 
 
 ### edit users with ( id )
 PATCH http://localhost:5000/users/me
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjlkIiwicm9sZSI6ImVtcGxveWVlIn0sImlhdCI6MTY5MzY3OTgzNSwiZXhwIjoxNjkzNzY2MjM1fQ.-LpFOMQ7-vDA72Z-CScZ7OxRuqGB6un6pa_yaCNWu9U
 # Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjlkIiwicm9sZSI6ImVtcGxveWVlIn0sImlhdCI6MTY5MzU0ODAzNywiZXhwIjoxNjkzNjM0NDM3fQ.ErHEdpnGMKBzHQrCVtMUwM17AeSIJPHUtmTXhPO3O8M
 Content-Type: application/json
 
 {
-  "first_name": "Sherozbek",
-  "last_name": "nima gap"
+  "first_name": "Mike",
+  "last_name": "Nickson",
+  "username": "mike"
 }
 
 
