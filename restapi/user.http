@@ -2,18 +2,18 @@
 POST http://localhost:5000/users/login
 Content-Type: application/json
 
-# {
-#   "username": "sherozbek.17",
-#   "password": "1234"
-# }
 {
-  "username": "kdeaconson9",
+  "username": "sherozbek.17",
   "password": "1234"
 }
+# {
+#   "username": "kdeaconson9",
+#   "password": "1234"
+# }
 
 ### add user
 POST http://localhost:5000/users
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzkyMTA2OCwiZXhwIjoxNjk0MDA3NDY4fQ.3oUflAuuC8PjEwtzCMWcDyPur7FHUu06vj57I1XiUEU
 Content-Type: application/json
 
 {
@@ -33,7 +33,7 @@ Content-Type: application/json
 
 ### get users without some query
 GET http://localhost:5000/users
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzkyMTA2OCwiZXhwIjoxNjk0MDA3NDY4fQ.3oUflAuuC8PjEwtzCMWcDyPur7FHUu06vj57I1XiUEU
 Content-Type: application/json
 
 
@@ -45,8 +45,8 @@ Content-Type: application/json
 
 
 ### get users with GET /users?q=sheroz
-GET http://localhost:5000/users?q=sheroz
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
+GET http://localhost:5000/users?q=p
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzkyMTA2OCwiZXhwIjoxNjk0MDA3NDY4fQ.3oUflAuuC8PjEwtzCMWcDyPur7FHUu06vj57I1XiUEU
 Content-Type: application/json
 
 
@@ -57,7 +57,7 @@ Content-Type: application/json
 
 ### get users with GET /users?sort[by]=age&sort[order]=desc
 GET http://localhost:5000/users?sort[by]=age&sort[order]=desc
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzkyMTA2OCwiZXhwIjoxNjk0MDA3NDY4fQ.3oUflAuuC8PjEwtzCMWcDyPur7FHUu06vj57I1XiUEU
 Content-Type: application/json
 
 
@@ -68,7 +68,7 @@ Content-Type: application/json
 
 ### get users with GET /users?sort[by]=age&sort[order]=desc
 GET http://localhost:5000/users?sort[by]=age&sort[order]=asc
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzkyMTA2OCwiZXhwIjoxNjk0MDA3NDY4fQ.3oUflAuuC8PjEwtzCMWcDyPur7FHUu06vj57I1XiUEU
 Content-Type: application/json
 
 
@@ -78,7 +78,7 @@ Content-Type: application/json
 
 ### get users with GET /users?filters[role]=employee
 GET http://localhost:5000/users?filters[role]=employee
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzkyMTA2OCwiZXhwIjoxNjk0MDA3NDY4fQ.3oUflAuuC8PjEwtzCMWcDyPur7FHUu06vj57I1XiUEU
 Content-Type: application/json
 
 
@@ -91,7 +91,7 @@ Content-Type: application/json
 
 ### get users with GET /users?page[offset]=0&page[limit]=10
 GET http://localhost:5000/users?page[offset]=0&page[limit]=10
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzkyMTA2OCwiZXhwIjoxNjk0MDA3NDY4fQ.3oUflAuuC8PjEwtzCMWcDyPur7FHUu06vj57I1XiUEU
 Content-Type: application/json
 
 
@@ -117,4 +117,4 @@ Content-Type: application/json
 
 ### remove user with { id }
 DELETE http://localhost:5000/users/64ee0dde481fa99395111f94
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjk0Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzU0MzMzNSwiZXhwIjoxNjkzNjI5NzM1fQ.Mxg8n-yhyiAqsfGaf5HW0dADvimHEipIKAlga3TCr54
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzkyMTA2OCwiZXhwIjoxNjk0MDA3NDY4fQ.3oUflAuuC8PjEwtzCMWcDyPur7FHUu06vj57I1XiUEU

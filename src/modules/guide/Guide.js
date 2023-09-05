@@ -9,10 +9,6 @@ const GuideSchema = new mongoose.Schema(
   {
     title: reqType,
     content: reqType,
-    notify: {
-      type: mongoose.SchemaTypes.Boolean,
-      default: false,
-    },
   },
   {
     versionKey: false,
