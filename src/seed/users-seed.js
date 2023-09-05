@@ -14,7 +14,7 @@ const users = [
     last_name: "Stegers",
     role: "employee",
     age: "11",
-    username: "rstegers0",
+    username: "mike",
     password: hashSync("1234", 10),
   },
   {
