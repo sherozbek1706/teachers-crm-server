@@ -16,9 +16,11 @@ app.use(express.json());
 
 // import router
 const userRoute = require("./modules/user/_api");
+const guideRoute = require("./modules/guide/_api");
 
 // middleware router
 app.use(userRoute);
+app.use(guideRoute);
 
 // DATABAZAGA ULANISH
 db();
