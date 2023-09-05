@@ -1,4 +1,7 @@
 const express = require("express");
+const addGuideServices = require("./add-guide");
+const listGuideService = require("./list-guide");
+const showGuideService = require("./show-guide");
 
 /**
  *
@@ -45,3 +48,8 @@ const showGuide = async (req, res, next) => {
   }
 };
 
+module.exports = {
+  addGuide,
+  listGuide,
+  showGuide,
+};
