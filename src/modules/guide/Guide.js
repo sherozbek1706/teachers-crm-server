@@ -5,3 +5,7 @@ const reqType = {
   required: true,
 };
 
+const GuideSchema = new mongoose.Schema(
+  {
+  }
+);
