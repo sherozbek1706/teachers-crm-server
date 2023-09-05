@@ -8,5 +8,6 @@ const reqType = {
 const GuideSchema = new mongoose.Schema(
   {
     title: reqType,
+    content: reqType,
   }
 );
