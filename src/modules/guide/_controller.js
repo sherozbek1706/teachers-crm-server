@@ -48,8 +48,20 @@ const showGuide = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+const editGuide = async (req, res, next) => {
+  try {
+  } catch (error) {
+  }
+};
 module.exports = {
   addGuide,
   listGuide,
   showGuide,
+  editGuide,
 };
