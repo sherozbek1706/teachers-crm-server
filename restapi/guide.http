@@ -1,7 +1,7 @@
 ### POST Guide
 POST http://localhost:5000/guides
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzkxMzY1MSwiZXhwIjoxNjk0MDAwMDUxfQ.lU78EXEX1uaOnCSI8Bg3IUoNdHK_Ds7FJgqbSOPWA94
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDAwNTU1OSwiZXhwIjoxNjk0MDkxOTU5fQ.nbC7Oircf7uZI_JWxmbZ5OJ0te9yAyBAH6Yhl-oPpZM
 
 {
   "title": "B Xabar",
@@ -11,11 +11,24 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJm
 
 ### GET Guide
 GET http://localhost:5000/guides
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzkxMzY1MSwiZXhwIjoxNjk0MDAwMDUxfQ.lU78EXEX1uaOnCSI8Bg3IUoNdHK_Ds7FJgqbSOPWA94
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDAwNTU1OSwiZXhwIjoxNjk0MDkxOTU5fQ.nbC7Oircf7uZI_JWxmbZ5OJ0te9yAyBAH6Yhl-oPpZM
 Content-Type: application/json
 
 
 ### GET Guide with { id }
 GET http://localhost:5000/guides/64f715f022cdf5d3f2cd4d88
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzkxMzY1MSwiZXhwIjoxNjk0MDAwMDUxfQ.lU78EXEX1uaOnCSI8Bg3IUoNdHK_Ds7FJgqbSOPWA94
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDAwNTU1OSwiZXhwIjoxNjk0MDkxOTU5fQ.nbC7Oircf7uZI_JWxmbZ5OJ0te9yAyBAH6Yhl-oPpZM
 Content-Type: application/json
+
+
+
+### PATCH Guide with { id }
+PATCH http://localhost:5000/guides/64f7160b22cdf5d3f2cd4d8a
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDAwNTU1OSwiZXhwIjoxNjk0MDkxOTU5fQ.nbC7Oircf7uZI_JWxmbZ5OJ0te9yAyBAH6Yhl-oPpZM
+Content-Type: application/json
+
+{
+  "title": "B Xabar OK",
+  "content": "B Content",
+  "sss":"sas"
+}

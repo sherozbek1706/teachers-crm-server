@@ -2,6 +2,7 @@ const express = require("express");
 const addGuideServices = require("./add-guide");
 const listGuideService = require("./list-guide");
 const showGuideService = require("./show-guide");
+const editGuideService = require("./edit-guide");
 
 /**
  *
@@ -48,8 +49,26 @@ const showGuide = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+const editGuide = async (req, res, next) => {
+  try {
+    const result = await editGuideService({
+      body: req.body,
+      params: req.params,
+    });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
 module.exports = {
   addGuide,
   listGuide,
   showGuide,
+  editGuide,
 };
