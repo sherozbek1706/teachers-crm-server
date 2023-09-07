@@ -34,3 +34,5 @@ UserGuideSchema.virtual("guide", {
   justOne: true,
 });
 
+const UserGuide = mongoose.model("user-guide", UserGuideSchema);
+module.exports = UserGuide;
