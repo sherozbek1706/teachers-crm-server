@@ -26,3 +26,11 @@ const UserGuideSchema = new mongoose.Schema(
     },
   }
 );
+
+UserGuideSchema.virtual("guide", {
+  ref: "guide",
+  localField: "guide_id",
+  foreignField: "_id",
+  justOne: true,
+});
+
