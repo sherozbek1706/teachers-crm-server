@@ -24,6 +24,12 @@ const listUserGuides = async (req, res, next) => {
  */
 const readUserGuides = async (req, res, next) => {
   try {
+    const result = await readUserGuideService({
+      user: req.user,
+      params: req.params,
+    });
+
+    res.status(200).json({ data: result });
   } catch (error) {
     next(error);
   }
