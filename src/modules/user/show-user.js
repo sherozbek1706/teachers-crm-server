@@ -1,4 +1,5 @@
 const User = require("./User");
+const ObjectId = require("mongoose").Types.ObjectId;
 
 const { NotFoundError, ForbiddenError } = require("../../shared/errors");
 
@@ -7,6 +8,10 @@ const showUserServices = async ({ params, user }) => {
     if (user.role !== "admin") {
       throw new ForbiddenError("This user is not allowed this right!");
     }
+  }
+
+  if (!ObjectId.isValid(params.id)) {
+    throw new NotFoundError("User Not Found!");
   }
 
   const existing = await User.findOne({ _id: params.id });
