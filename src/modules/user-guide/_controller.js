@@ -1,4 +1,6 @@
 const express = require("express");
+const listUserGuideService = require("./list-user-guides");
+const readUserGuideService = require("./read-user-guide");
 
 /**
  *
@@ -35,3 +37,7 @@ const readUserGuides = async (req, res, next) => {
   }
 };
 
+module.exports = {
+  listUserGuides,
+  readUserGuides,
+};
