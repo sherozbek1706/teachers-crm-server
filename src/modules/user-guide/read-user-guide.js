@@ -1,3 +1,4 @@
+const { NotFoundError } = require("../../shared/errors");
 const UserGuide = require("./UserGuide");
 
 const readUserGuideService = async ({ user, params }) => {
@@ -9,5 +10,12 @@ const readUserGuideService = async ({ user, params }) => {
     throw new NotFoundError("User Guide Not Found!");
   }
 
+  const editingUserGuide = await UserGuide.findByIdAndUpdate(
+    { _id: params.id },
+    { ...existing._doc, completed: true },
+    { new: true }
+  );
+
+  return editingUserGuide;
 };
 module.exports = readUserGuideService;
