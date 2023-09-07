@@ -1,30 +1,30 @@
 ### POST Guide
 POST http://localhost:5000/guides
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDAwNTU1OSwiZXhwIjoxNjk0MDkxOTU5fQ.nbC7Oircf7uZI_JWxmbZ5OJ0te9yAyBAH6Yhl-oPpZM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDAwOTk5OCwiZXhwIjoxNjk0MDk2Mzk4fQ.yG5i4ixNDW7fJL_qC1tsfThfcTMdW9cEYstLKm4Bz88
 
 {
-  "title": "B Xabar",
-  "content": "B Content",
+  "title": "A Title",
+  "content": "A Content",
   "notify": true
 }
 
 ### GET Guide
 GET http://localhost:5000/guides
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDAwNTU1OSwiZXhwIjoxNjk0MDkxOTU5fQ.nbC7Oircf7uZI_JWxmbZ5OJ0te9yAyBAH6Yhl-oPpZM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDAwOTk5OCwiZXhwIjoxNjk0MDk2Mzk4fQ.yG5i4ixNDW7fJL_qC1tsfThfcTMdW9cEYstLKm4Bz88
 Content-Type: application/json
 
 
 ### GET Guide with { id }
 GET http://localhost:5000/guides/64f715f022cdf5d3f2cd4d88
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDAwNTU1OSwiZXhwIjoxNjk0MDkxOTU5fQ.nbC7Oircf7uZI_JWxmbZ5OJ0te9yAyBAH6Yhl-oPpZM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDAwOTk5OCwiZXhwIjoxNjk0MDk2Mzk4fQ.yG5i4ixNDW7fJL_qC1tsfThfcTMdW9cEYstLKm4Bz88
 Content-Type: application/json
 
 
 
 ### PATCH Guide with { id }
 PATCH http://localhost:5000/guides/64f7160b22cdf5d3f2cd4d8a
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmNmJmZjMwOGZjZWVmZWJiMWVhYWUyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDAwNTU1OSwiZXhwIjoxNjk0MDkxOTU5fQ.nbC7Oircf7uZI_JWxmbZ5OJ0te9yAyBAH6Yhl-oPpZM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDAwOTk5OCwiZXhwIjoxNjk0MDk2Mzk4fQ.yG5i4ixNDW7fJL_qC1tsfThfcTMdW9cEYstLKm4Bz88
 Content-Type: application/json
 
 {
