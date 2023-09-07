@@ -8,6 +8,9 @@ const express = require("express");
  */
 const listUserGuides = async (req, res, next) => {
   try {
+    const result = await listUserGuideService({ user: req.user });
+
+    res.status(200).json({ data: result });
   } catch (error) {
     next(error);
   }
