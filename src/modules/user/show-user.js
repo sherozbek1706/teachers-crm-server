@@ -1,4 +1,5 @@
 const User = require("./User");
+const UserGuide = require("../user-guide/UserGuide");
 const ObjectId = require("mongoose").Types.ObjectId;
 
 const { NotFoundError, ForbiddenError } = require("../../shared/errors");
@@ -19,10 +20,14 @@ const showUserServices = async ({ params, user }) => {
   if (!existing) {
     throw new NotFoundError("User Not Found!");
   }
+
+  const ownGuide = await UserGuide.find({ user_id: existing.id });
+  const unCompletedGuide = ownGuide.filter((guide) => guide.completed == false);
+
   const infoGuide = {
-    total_guides: 3,
-    todo_guides: 2,
-    read_guides: 1,
+    total_guides: ownGuide.length,
+    todo_guides: unCompletedGuide.length,
+    read_guides: ownGuide.length - unCompletedGuide.length,
   };
   return { ...existing._doc, ...infoGuide };
 };
