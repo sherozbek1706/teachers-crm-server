@@ -22,6 +22,8 @@ const showUserServices = async ({ params, user }) => {
   }
 
   const ownGuide = await UserGuide.find({ user_id: existing.id });
+  const unCompletedGuide = ownGuide.filter((guide) => guide.completed == false);
+
   const infoGuide = {
     total_guides: 3,
     todo_guides: 2,
