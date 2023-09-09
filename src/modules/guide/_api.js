@@ -5,7 +5,7 @@ const router = require("express").Router();
 
 const mAddGuide = [isloggedIn, hasRole(["admin"])];
 const mListGuide = [isloggedIn];
-const mShowGuide = [isloggedIn];
+const mShowGuide = [isloggedIn, isMongoId];
 const mEditGuide = [isloggedIn, isMongoId, hasRole(["admin"])];
 
 router.post("/guides", mAddGuide, addGuide);
