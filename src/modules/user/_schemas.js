@@ -56,10 +56,18 @@ const PatchEditUserSchema = {
     password: Joi.string(),
   }),
 };
+
+const DeleteRemoveUserSchema = {
+  params: Joi.object({
+    id: Joi.string().required(),
+  }),
+};
+
 module.exports = {
   PostLoginSchema,
   PostAddUserSchema,
   GetListUserSchema,
   GetShowUserSchema,
   PatchEditUserSchema,
+  DeleteRemoveUserSchema,
 };
