@@ -12,7 +12,9 @@ const jwt = require("jsonwebtoken");
 
 const isLoggedIn = async (req, res, next) => {
   try {
-    const token = req.headers.authorization;
+    const BearerToken = req.headers.authorization.split(" ");
+
+    const token = BearerToken[1];
 
     if (!token) {
       throw new UnauthorizedError("Unauthorized");
