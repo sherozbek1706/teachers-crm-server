@@ -16,19 +16,19 @@ Content-Type: application/json
 
 
 ### GET Guide with { id }
-GET http://localhost:5000/guides/64f715f022cdf5d3f2cd4d88
+GET http://localhost:5000/guides/64fc485b194ef038ef5129bf
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDMyMTg5MCwiZXhwIjoxNjk0NDA4MjkwfQ.fpkf4CmQtp9OLmtrwFucZ-QuTjR82Sv4kTOVdqjJ-Vs
 Content-Type: application/json
 
 
 
 ### PATCH Guide with { id }
-PATCH http://localhost:5000/guides/64f99c5092c8589a22520956
+PATCH http://localhost:5000/guides/64fc485b194ef038ef5129bf
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDMyMTg5MCwiZXhwIjoxNjk0NDA4MjkwfQ.fpkf4CmQtp9OLmtrwFucZ-QuTjR82Sv4kTOVdqjJ-Vs
 Content-Type: application/json
 
 {
-  "title": "B Xabar OK",
+  "title": "Lekin",
   "content": "B Content",
   "notify": true
 }
