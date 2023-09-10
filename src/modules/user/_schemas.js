@@ -20,7 +20,25 @@ const PostAddUserSchema = {
   }),
 };
 
+const GetListUserSchema = {
+  query: Joi.object({
+    q: Joi.string(),
+    sort: {
+      by: Joi.string().valid(...["age", "id"]),
+      order: Joi.string().valid(...["asc", "desc"]),
+    },
+    filters: {
+      role: Joi.string().valid(...["employee", "admin"]),
+    },
+    page: {
+      limit: Joi.number(),
+      offset: Joi.number(),
+    },
+  }),
+};
+
 module.exports = {
   PostLoginSchema,
   PostAddUserSchema,
+  GetListUserSchema,
 };
