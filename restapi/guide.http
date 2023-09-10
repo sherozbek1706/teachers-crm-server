@@ -4,13 +4,31 @@ Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDMyMTg5MCwiZXhwIjoxNjk0NDA4MjkwfQ.fpkf4CmQtp9OLmtrwFucZ-QuTjR82Sv4kTOVdqjJ-Vs
 
 {
-  "title": "OK Title",
+  "title": "Lil Title",
   "content": "OK Content",
   "notify": true
 }
 
 ### GET Guide
 GET http://localhost:5000/guides
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDMyMTg5MCwiZXhwIjoxNjk0NDA4MjkwfQ.fpkf4CmQtp9OLmtrwFucZ-QuTjR82Sv4kTOVdqjJ-Vs
+Content-Type: application/json
+
+
+### GET Guide search 
+GET http://localhost:5000/guides?q=LIL
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDMyMTg5MCwiZXhwIjoxNjk0NDA4MjkwfQ.fpkf4CmQtp9OLmtrwFucZ-QuTjR82Sv4kTOVdqjJ-Vs
+Content-Type: application/json
+
+
+### GET Guide sort 
+GET http://localhost:5000/guides?sort[by]=id&sort[order]=asc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDMyMTg5MCwiZXhwIjoxNjk0NDA4MjkwfQ.fpkf4CmQtp9OLmtrwFucZ-QuTjR82Sv4kTOVdqjJ-Vs
+Content-Type: application/json
+
+
+### GET Guide page 
+GET http://localhost:5000/guides?page[offset]=0&page[limit]=10
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDMyMTg5MCwiZXhwIjoxNjk0NDA4MjkwfQ.fpkf4CmQtp9OLmtrwFucZ-QuTjR82Sv4kTOVdqjJ-Vs
 Content-Type: application/json
 
