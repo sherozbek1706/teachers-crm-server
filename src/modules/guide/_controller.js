@@ -37,7 +37,7 @@ const addGuide = async (req, res, next) => {
  */
 const listGuide = async (req, res, next) => {
   try {
-    httpvalidator({}, GetListGuideSchema);
+    httpvalidator({ query: req.query }, GetListGuideSchema);
     const result = await listGuideService({ query: req.query });
     res.status(200).json(result);
   } catch (error) {

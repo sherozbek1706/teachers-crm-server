@@ -8,7 +8,19 @@ const PostAddGuideSchema = {
   }),
 };
 
-const GetListGuideSchema = {};
+const GetListGuideSchema = {
+  query: Joi.object({
+    q: Joi.string(),
+    sort: {
+      by: Joi.string().valid(...["id"]),
+      order: Joi.string().valid(...["asc", "desc"]),
+    },
+    page: {
+      limit: Joi.number(),
+      offset: Joi.number().min(0),
+    },
+  }),
+};
 
 const GetShowGuideSchema = {
   params: Joi.object({
