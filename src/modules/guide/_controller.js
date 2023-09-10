@@ -9,6 +9,7 @@ const httpvalidator = require("../../shared/http-validator");
 const {
   PostAddGuideSchema,
   GetListGuideSchema,
+  GetShowGuideSchema,
 } = require("./_schemas");
 
 /**
@@ -51,6 +52,7 @@ const listGuide = async (req, res, next) => {
  */
 const showGuide = async (req, res, next) => {
   try {
+    httpvalidator({ params: req.params }, GetShowGuideSchema);
     const result = await showGuideService({ params: req.params });
     res.status(200).json({ data: result });
   } catch (error) {
