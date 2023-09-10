@@ -11,9 +11,12 @@ const bulkUserGuideService = require("./bulk-user-guide");
  */
 const listUserGuides = async (req, res, next) => {
   try {
-    const result = await listUserGuideService({ user: req.user });
+    const result = await listUserGuideService({
+      user: req.user,
+      query: req.query,
+    });
 
-    res.status(200).json({ data: result });
+    res.status(200).json(result);
   } catch (error) {
     next(error);
   }
