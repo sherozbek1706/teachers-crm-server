@@ -8,6 +8,16 @@ const PostAddGuideSchema = {
   }),
 };
 
+const GetListGuideSchema = {};
+
+const GetShowGuideSchema = {
+  params: Joi.object({
+    id: Joi.string().required(),
+  }),
+};
+
 module.exports = {
   PostAddGuideSchema,
+  GetListGuideSchema,
+  GetShowGuideSchema,
 };

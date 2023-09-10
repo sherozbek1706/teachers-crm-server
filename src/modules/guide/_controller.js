@@ -6,7 +6,11 @@ const editGuideService = require("./edit-guide");
 
 const httpvalidator = require("../../shared/http-validator");
 
-const { PostAddGuideSchema } = require("./_schemas");
+const {
+  PostAddGuideSchema,
+  GetListGuideSchema,
+  GetShowGuideSchema,
+} = require("./_schemas");
 
 /**
  *
@@ -32,6 +36,7 @@ const addGuide = async (req, res, next) => {
  */
 const listGuide = async (req, res, next) => {
   try {
+    httpvalidator({}, GetListGuideSchema);
     const result = await listGuideService();
     res.status(200).json({ data: result });
   } catch (error) {
@@ -47,6 +52,7 @@ const listGuide = async (req, res, next) => {
  */
 const showGuide = async (req, res, next) => {
   try {
+    httpvalidator({ params: req.params }, GetShowGuideSchema);
     const result = await showGuideService({ params: req.params });
     res.status(200).json({ data: result });
   } catch (error) {
