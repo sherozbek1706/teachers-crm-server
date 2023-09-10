@@ -42,9 +42,24 @@ const GetShowUserSchema = {
     id: Joi.string().required(),
   }),
 };
+
+const PatchEditUserSchema = {
+  params: Joi.object({
+    id: Joi.string().required(),
+  }),
+  body: Joi.object({
+    first_name: Joi.string(),
+    last_name: Joi.string(),
+    role: Joi.string().valid(...["admin", "employee"]),
+    age: Joi.number(),
+    username: Joi.string(),
+    password: Joi.string(),
+  }),
+};
 module.exports = {
   PostLoginSchema,
   PostAddUserSchema,
   GetListUserSchema,
   GetShowUserSchema,
+  PatchEditUserSchema,
 };
