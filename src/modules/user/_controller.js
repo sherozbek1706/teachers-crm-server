@@ -6,6 +6,10 @@ const showUserServices = require("./show-user");
 const editUserServices = require("./edit-user");
 const removeUserServices = require("./remove-user");
 
+const httpValidator = require("../../shared/http-validator");
+
+const { PostLoginSchema } = require("./_schemas");
+
 /**
  *
  * @param {express.Request} req
@@ -15,6 +19,7 @@ const removeUserServices = require("./remove-user");
 
 const loginUser = async (req, res, next) => {
   try {
+    httpValidator({ body: req.body }, PostLoginSchema);
     const result = await loginUserServices({ body: req.body });
 
     res.status(200).json({ data: result });
