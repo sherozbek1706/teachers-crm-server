@@ -26,21 +26,13 @@ Content-Type: application/json
 }
 
 
-
-
-
+  
 
 
 ### get users without some query
 GET http://localhost:5000/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDMyMzI2MywiZXhwIjoxNjk0NDA5NjYzfQ.oOs50J35L8RC6pCl0hDDF49GIjPwINR0yC1w6V9AexY
 Content-Type: application/json
-
-
-
-
-
-
 
 
 
@@ -51,10 +43,6 @@ Content-Type: application/json
 
 
 
-
-
-
-
 ### get users with GET /users?sort[by]=age&sort[order]=desc
 GET http://localhost:5000/users?sort[by]=age&sort[order]=asc
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDMyMzI2MywiZXhwIjoxNjk0NDA5NjYzfQ.oOs50J35L8RC6pCl0hDDF49GIjPwINR0yC1w6V9AexY
@@ -63,15 +51,10 @@ Content-Type: application/json
 
 
 
-
-
-
 ### get users with GET /users?sort[by]=age&sort[order]=desc
 GET http://localhost:5000/users?sort[by]=age&sort[order]=asc
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDMyMzI2MywiZXhwIjoxNjk0NDA5NjYzfQ.oOs50J35L8RC6pCl0hDDF49GIjPwINR0yC1w6V9AexY
 Content-Type: application/json
-
-
 
 
 
@@ -80,12 +63,6 @@ Content-Type: application/json
 GET http://localhost:5000/users?filters[role]=employee
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDMyMzI2MywiZXhwIjoxNjk0NDA5NjYzfQ.oOs50J35L8RC6pCl0hDDF49GIjPwINR0yC1w6V9AexY
 Content-Type: application/json
-
-
-
-
-
-
 
 
 

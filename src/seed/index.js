@@ -4,11 +4,13 @@ const config = require("../shared/config");
 // Collectionslarni import qilib olish.
 // Bu joyda yozganimni sababi ko'p Collections ishlatilishi mumkin!
 const User = require("../modules/user/User");
+const Guide = require("../modules/guide/Guide");
 
 // Seedlarni import qilib olish.
 // Seedlarni bu joyda import qilamiz hammasi
 // bir biri bilan aralashib ketmasligi uchun
 const UsersSeed = require("./users-seed.js");
+const GuideSeed = require("./guide-seed.js");
 
 const seedData = async () => {
   const uri = `mongodb://${config.db.host}:${config.db.port}/${config.db.name}`;
@@ -30,6 +32,9 @@ const seedData = async () => {
     // o'sha collecttionni o'chirish kerek
     await User.deleteMany({});
     await User.insertMany(UsersSeed);
+
+    await Guide.deleteMany({});
+    await Guide.insertMany(GuideSeed);
   };
 
   seedDB().then(() => {
