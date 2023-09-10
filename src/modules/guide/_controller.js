@@ -10,6 +10,7 @@ const {
   PostAddGuideSchema,
   GetListGuideSchema,
   GetShowGuideSchema,
+  PatchEditGuideSchema,
 } = require("./_schemas");
 
 /**
@@ -68,6 +69,7 @@ const showGuide = async (req, res, next) => {
  */
 const editGuide = async (req, res, next) => {
   try {
+    httpvalidator({ body: req.body, params: req.params }, PatchEditGuideSchema);
     const result = await editGuideService({
       body: req.body,
       params: req.params,
