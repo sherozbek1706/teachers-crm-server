@@ -13,6 +13,7 @@ const {
   PostAddUserSchema,
   GetListUserSchema,
   GetShowUserSchema,
+  PatchEditUserSchema,
 } = require("./_schemas");
 
 /**
@@ -103,6 +104,7 @@ const showUser = async (req, res, next) => {
 
 const editUser = async (req, res, next) => {
   try {
+    httpValidator({ body: req.body, params: req.params }, PatchEditUserSchema);
     let result;
 
     if (req.params.id == "me") {
