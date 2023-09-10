@@ -12,6 +12,7 @@ const {
   PostLoginSchema,
   PostAddUserSchema,
   GetListUserSchema,
+  GetShowUserSchema,
 } = require("./_schemas");
 
 /**
@@ -77,6 +78,8 @@ const listUser = async (req, res, next) => {
 
 const showUser = async (req, res, next) => {
   try {
+    httpValidator({ params: req.params }, GetShowUserSchema);
+
     let result;
 
     if (req.params.id == "me") {

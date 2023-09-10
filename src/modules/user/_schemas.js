@@ -37,8 +37,14 @@ const GetListUserSchema = {
   }),
 };
 
+const GetShowUserSchema = {
+  params: Joi.object({
+    id: Joi.string().required(),
+  }),
+};
 module.exports = {
   PostLoginSchema,
   PostAddUserSchema,
   GetListUserSchema,
+  GetShowUserSchema,
 };
