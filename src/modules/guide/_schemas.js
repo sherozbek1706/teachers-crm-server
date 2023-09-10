@@ -8,6 +8,9 @@ const PostAddGuideSchema = {
   }),
 };
 
+const GetListGuideSchema = {};
+
 module.exports = {
   PostAddGuideSchema,
+  GetListGuideSchema,
 };
