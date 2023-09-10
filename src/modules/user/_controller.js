@@ -14,6 +14,7 @@ const {
   GetListUserSchema,
   GetShowUserSchema,
   PatchEditUserSchema,
+  DeleteRemoveUserSchema,
 } = require("./_schemas");
 
 /**
@@ -132,6 +133,7 @@ const editUser = async (req, res, next) => {
 
 const removeUser = async (req, res, next) => {
   try {
+    httpValidator({ params: req.params }, DeleteRemoveUserSchema);
     const result = await removeUserServices({
       params: req.params,
       user: req.user,

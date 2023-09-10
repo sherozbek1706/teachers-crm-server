@@ -116,5 +116,5 @@ Content-Type: application/json
 
 
 ### remove user with { id }
-DELETE http://localhost:5000/users/64ee0dde481fa99395111f94
+DELETE http://localhost:5000/users/64f88a040ae47c9635e19fb0
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDMyMzI2MywiZXhwIjoxNjk0NDA5NjYzfQ.oOs50J35L8RC6pCl0hDDF49GIjPwINR0yC1w6V9AexY
