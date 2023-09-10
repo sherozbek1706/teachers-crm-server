@@ -1,6 +1,7 @@
 const express = require("express");
 const listUserGuideService = require("./list-user-guides");
 const readUserGuideService = require("./read-user-guide");
+const bulkUserGuideService = require("./bulk-user-guide");
 
 /**
  *
@@ -37,7 +38,24 @@ const readUserGuides = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+const bulkUserGuides = async (req, res, next) => {
+  try {
+    const result = await bulkUserGuideService({ body: req.body });
+
+    res.status(201).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   listUserGuides,
   readUserGuides,
+  bulkUserGuides,
 };
