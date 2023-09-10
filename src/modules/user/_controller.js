@@ -8,7 +8,11 @@ const removeUserServices = require("./remove-user");
 
 const httpValidator = require("../../shared/http-validator");
 
-const { PostLoginSchema, PostAddUserSchema } = require("./_schemas");
+const {
+  PostLoginSchema,
+  PostAddUserSchema,
+  GetListUserSchema,
+} = require("./_schemas");
 
 /**
  *
@@ -55,6 +59,7 @@ const addUser = async (req, res, next) => {
 
 const listUser = async (req, res, next) => {
   try {
+    httpValidator({ query: req.query }, GetListUserSchema);
     const result = await listUserServices({ query: req.query });
 
     res.status(200).json(result);
