@@ -4,6 +4,10 @@ const listGuideService = require("./list-guide");
 const showGuideService = require("./show-guide");
 const editGuideService = require("./edit-guide");
 
+const httpvalidator = require("../../shared/http-validator");
+
+const { PostAddGuideSchema } = require("./_schemas");
+
 /**
  *
  * @param {express.Request} req
@@ -12,6 +16,7 @@ const editGuideService = require("./edit-guide");
  */
 const addGuide = async (req, res, next) => {
   try {
+    httpvalidator({ body: req.body }, PostAddGuideSchema);
     const result = await addGuideServices({ body: req.body });
     res.status(201).json({ data: result });
   } catch (error) {
