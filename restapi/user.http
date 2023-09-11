@@ -2,14 +2,14 @@
 POST http://localhost:5000/users/login
 Content-Type: application/json
 
-{
-  "username": "sherozbek.17",
-  "password": "1234"
-}
 # {
-#   "username": "kdeaconson9",
+#   "username": "sherozbek.17",
 #   "password": "1234"
 # }
+{
+  "username": "mike",
+  "password": "1234"
+}
 
 ### add user
 POST http://localhost:5000/users
@@ -81,14 +81,16 @@ Content-Type: application/json
 
 ### edit users with ( id )
 PATCH http://localhost:5000/users/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDMyMzI2MywiZXhwIjoxNjk0NDA5NjYzfQ.oOs50J35L8RC6pCl0hDDF49GIjPwINR0yC1w6V9AexY
-# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTBkZGU0ODFmYTk5Mzk1MTExZjlkIiwicm9sZSI6ImVtcGxveWVlIn0sImlhdCI6MTY5MzU0ODAzNywiZXhwIjoxNjkzNjM0NDM3fQ.ErHEdpnGMKBzHQrCVtMUwM17AeSIJPHUtmTXhPO3O8M
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmODhhMDQwYWU0N2M5NjM1ZTE5ZjdmIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDMyMzI2MywiZXhwIjoxNjk0NDA5NjYzfQ.oOs50J35L8RC6pCl0hDDF49GIjPwINR0yC1w6V9AexY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRmZGI1MDFmZTc2MmI2YzM0ZTc3MGQyIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5NDM1MjI1NSwiZXhwIjoxNjk0NDM4NjU1fQ.vxEWt6fKWV3C29LJMmaFh5jZ0AtqS3_kjs0ewiiQu0c
 Content-Type: application/json
 
 {
-  "first_name": "Mike",
-  "last_name": "Nickson",
-  "username": "sherozbek.17"
+  "first_name": "Mikejon",
+  "last_name": "Nicksonbek",
+  # "username": "mike",
+  "password": "0000",
+  "role": "admin"
 }
 
 

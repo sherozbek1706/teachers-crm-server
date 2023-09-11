@@ -10,7 +10,7 @@ const PostAddGuideSchema = {
 
 const GetListGuideSchema = {
   query: Joi.object({
-    q: Joi.string(),
+    q: Joi.string().allow(""),
     sort: {
       by: Joi.string().valid(...["id"]),
       order: Joi.string().valid(...["asc", "desc"]),
