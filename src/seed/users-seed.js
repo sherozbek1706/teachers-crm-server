@@ -12,7 +12,7 @@ const users = [
   {
     first_name: "Rabi",
     last_name: "Stegers",
-    role: "employee",
+    role: "admin",
     age: "11",
     username: "mike",
     password: hashSync("1234", 10),
@@ -20,7 +20,7 @@ const users = [
   {
     first_name: "Adrian",
     last_name: "Readhead",
-    role: "employee",
+    role: "admin",
     age: "1079",
     username: "areadhead2",
     password: hashSync("1234", 10),
@@ -28,7 +28,7 @@ const users = [
   {
     first_name: "Tyne",
     last_name: "Murton",
-    role: "employee",
+    role: "admin",
     age: "2100",
     username: "tmurton3",
     password: hashSync("1234", 10),
@@ -36,7 +36,7 @@ const users = [
   {
     first_name: "Oralia",
     last_name: "Schoenfisch",
-    role: "employee",
+    role: "admin",
     age: "3538",
     username: "oschoenfisch4",
     password: hashSync("1234", 10),
@@ -44,7 +44,7 @@ const users = [
   {
     first_name: "Scarface",
     last_name: "Watt",
-    role: "employee",
+    role: "admin",
     age: "56",
     username: "swatt5",
     password: hashSync("1234", 10),
@@ -52,7 +52,7 @@ const users = [
   {
     first_name: "Carlota",
     last_name: "Macer",
-    role: "employee",
+    role: "admin",
     age: "127",
     username: "cmacer6",
     password: hashSync("1234", 10),
@@ -60,7 +60,7 @@ const users = [
   {
     first_name: "Melly",
     last_name: "Foulger",
-    role: "employee",
+    role: "admin",
     age: "2750",
     username: "mfoulger7",
     password: hashSync("1234", 10),
@@ -68,7 +68,7 @@ const users = [
   {
     first_name: "Dione",
     last_name: "Barttrum",
-    role: "employee",
+    role: "admin",
     age: "87",
     username: "dbarttrum8",
     password: hashSync("1234", 10),
@@ -76,7 +76,7 @@ const users = [
   {
     first_name: "Klaus",
     last_name: "Deaconson",
-    role: "employee",
+    role: "admin",
     age: "43",
     username: "kdeaconson9",
     password: hashSync("1234", 10),
@@ -84,7 +84,7 @@ const users = [
   {
     first_name: "Ranique",
     last_name: "Bartolomeazzi",
-    role: "employee",
+    role: "admin",
     age: "977",
     username: "rbartolomeazzia",
     password: hashSync("1234", 10),
