@@ -21,7 +21,7 @@ const editUserServices = async ({ body, params, user }) => {
 
   const existedUsername = await User.findOne({ username: body.username });
 
-  if (existedUsername) {
+  if (existedUsername && body.username != existing.username) {
     throw new BadRequestError("This username already existed!");
   }
 
