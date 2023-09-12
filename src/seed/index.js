@@ -5,6 +5,7 @@ const config = require("../shared/config");
 // Bu joyda yozganimni sababi ko'p Collections ishlatilishi mumkin!
 const User = require("../modules/user/User");
 const Guide = require("../modules/guide/Guide");
+const UserGuide = require("../modules/user-guide/UserGuide");
 
 // Seedlarni import qilib olish.
 // Seedlarni bu joyda import qilamiz hammasi
@@ -35,6 +36,9 @@ const seedData = async () => {
 
     await Guide.deleteMany({});
     await Guide.insertMany(GuideSeed);
+
+    await UserGuide.deleteMany({});
+    // await UserGuide.insertMany();
   };
 
   seedDB().then(() => {
